@@ -1,4 +1,5 @@
 import java.awt.*;
+<<<<<<< HEAD
 import java.util.ArrayList;
 
 public class Puppy implements Actor {
@@ -25,3 +26,14 @@ public class Puppy implements Actor {
 
     }
     
+=======
+
+public class Puppy extends Actor {
+
+    public Puppy(Cell loc){
+        this.loc = loc;
+        this.colour = Color.GREEN;
+    }
+
+}
+>>>>>>> c3d3273b6f732c62e9e1e3179e02f7d0ec82caf7

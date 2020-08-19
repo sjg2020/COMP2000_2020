@@ -14,7 +14,11 @@ class Main extends JFrame {
 
         @Override
         public void paint(Graphics g) {
+<<<<<<< HEAD
             stage.paint(g);
+=======
+            stage.paint(g, getMousePosition());
+>>>>>>> c3d3273b6f732c62e9e1e3179e02f7d0ec82caf7
         }
 
     }
