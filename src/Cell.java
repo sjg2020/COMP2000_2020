@@ -1,19 +1,24 @@
 import java.awt.*;
 
-class Cell{
+
+
+public class Cell extends java.awt.Rectangle{
     // fields
-    int x;
-    int y;
+    public int x;
+    public int y;
     static int size = 35;
+    
 
     //constructors
+
     public Cell(int x, int y){
-        this.x = x;
+        super(x, y);
+        this.x  = x;
         this.y = y;
     }
 
     //methods
-    void paint(Graphics g, Point mousePos){
+    void paint(Graphics g){
         if(contains(mousePos)){
             g.setColor(Color.GRAY);
         } else {
@@ -22,13 +27,18 @@ class Cell{
         g.fillRect(x,y,size,size);
         g.setColor(Color.BLACK);
         g.drawRect(x,y,size,size);
+
     }
 
-    boolean contains(Point p){
-        if (p != null){
-            return (x < p.x && x+size > p.x && y < p.y && y+size > p.y);
+
+    public boolean contains(Point p) {
+        if (p != null) {
+            return super.contains(p);
         } else {
             return false;
         }
     }
 }
+
+
+
