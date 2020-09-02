@@ -1,24 +1,31 @@
 import java.awt.*;
-<<<<<<< HEAD
 import java.util.ArrayList;
+import java.awt.Polygon;
+
 
 public class Puppy implements Actor {
     Grid sam;
     Cell x;
      int j;
      int f;
+     Polygon Sam;
 
     public Puppy(Grid sam, int j, int f) {
         x = sam.cells[0][0];
         j = x.x;
         f = x.y;
+    Polygon Sam = new Polygon();
+    Sam.addPoint(x.x, x.y);
+
     }
 
-    @Override
+    
     public void  paint(Graphics g) {
-        g.fillRect(j, f, 35, 35);
-                g.setColor(Color.GREEN);
-                g.drawRect(45,45,35,35);
+      Jkss.add(Sam);
+      for(int i = 0; i<Jkss.size(); i++){
+    g.drawPolygon(Sam);
+    g.drawPolygon(xPoints, yPoints, nPoints);
+      }
         }
         
     
@@ -26,14 +33,3 @@ public class Puppy implements Actor {
 
     }
     
-=======
-
-public class Puppy extends Actor {
-
-    public Puppy(Cell loc){
-        this.loc = loc;
-        this.colour = Color.GREEN;
-    }
-
-}
->>>>>>> c3d3273b6f732c62e9e1e3179e02f7d0ec82caf7

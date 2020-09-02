@@ -1,5 +1,4 @@
 import java.awt.*;
-<<<<<<< HEAD
 public class Lion implements Actor {
     
         Grid sam;
@@ -23,14 +22,3 @@ public class Lion implements Actor {
             
         
      }    
-=======
-
-public class Lion extends Actor {
-
-    public Lion(Cell loc) {
-        this.loc = loc;
-        this.colour = Color.RED;
-    }
-
-}
->>>>>>> c3d3273b6f732c62e9e1e3179e02f7d0ec82caf7
